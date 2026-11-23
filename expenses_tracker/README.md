@@ -1,17 +1,11 @@
-# expenses_tracker
+Որտե՞ղ եք պահում ծախսերի ցուցակը և ինչու այնտեղ
+1. Պահել եմ List<Expense> expenses = []; lib/screens.expenses_tracker_main.dart ֆայլում
+2. Կոդ գրելուց այդտեղ հարմար էր և edit_expense_page ում state ը չի փոխվում
 
-A new Flutter project.
+Ինչպե՞ս եք հաշվում ընդհանուր գումարը, և ինչու այն չեք պահում առանձին փոփոխականում
+1. Ընդհանուր գումարը հաշվելու համար օգտագործել եմ fold մեթոդը
+2. Որովհետև պահանջի մեջ տենց էր գրած
 
-## Getting Started
+Ինչո՞ւ է Dismissible-ի key-ը expense.id, ոչ թե index
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Իմ մետ ոչ ․id է ոչ index, այլ ObjectKey(expense) քանի որ էս բանալին կապվումա հենց ծախսի ու ոչ թե դիրքի հետ

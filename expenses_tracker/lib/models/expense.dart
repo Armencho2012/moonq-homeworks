@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'category.dart';
 
 class Expense {
   final int id;
@@ -12,5 +12,4 @@ class Expense {
     required this.amount,
     required this.category,
   });
-
 }
