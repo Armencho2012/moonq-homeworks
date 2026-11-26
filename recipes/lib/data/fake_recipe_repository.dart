@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:recipes/models/recipe.dart';
 
 class FakeRecipeRepository {
@@ -10,6 +12,10 @@ class FakeRecipeRepository {
     Recipe(id: 6, name: 'Khorovats', cuisine: 'Armenian', cookTimeMinutes: 60, difficulty: 'Medium', rating: 4.9),
   ];
   Future<List<Recipe>> fetchRecipes() async{
-    return Future.delayed(const Duration(seconds: 2), ()=>_recipes);
+    await Future.delayed(const Duration(seconds: 2));
+    if(Random().nextInt(3) == 0){
+      throw Exception('Failed to load recipes');
+    }
+    return _recipes;
   }
 }
